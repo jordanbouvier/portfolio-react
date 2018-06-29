@@ -1,0 +1,139 @@
+@import 'app/styles/charte'
+.realisation-show
+
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  min-height: 100vh
+  z-index: 999
+  overflow-y: scroll
+  overflow-x: hidden
+  &-arrow-left, &-arrow-right
+    width: 50px
+    height: 50px
+    border-top: 3px solid main-color
+    border-right: 3px solid main-color
+    position: absolute
+    top: 50%
+    cursor: pointer
+  &-arrow-left
+    transform: rotate(-135deg) translateY(-50%)
+    left: 3rem
+  &-arrow-right
+    right: 3rem
+    transform: rotate(45deg) translateY(-50%)
+
+  &-black-background
+    position: fixed
+    width: 99%
+    min-height: 100vh
+    background-color: rgba(#000, 0.6)
+  &-content
+    display flex
+    left: 50%
+    transform: translateX(-50%)
+    position:absolute
+    min-height: 100vh
+    background-color: white
+    width: 100%
+
+
+    &--previous
+      -webkit-animation: previous-realisation 5s infinite; /* Safari 4+ */
+      -moz-animation:    previous-realisation 5s infinite; /* Fx 5+ */
+      -o-animation:      previous-realisation 5s infinite; /* Opera 12+ */
+      animation:         previous-realisation 5s infinite; /* IE 10+, Fx 29+ */
+
+
+    &-pictures
+      width: 60%
+      overflow:auto
+      & img
+        width:100%
+        height:auto
+
+    &-description
+      width: 40%;
+      & .default-title
+        padding-left: 1rem
+        color: main-color
+        text-decoration: underline
+  @media screen and (min-width: 1200px)
+    &-content
+      width: 900px
+  @media screen and (min-width: 1400px)
+    &-content
+      width: 1200px
+
+
+@keyframes next-realisation {
+  0% {
+    left: 50%
+  }
+  25% {
+    left: -100%
+    visibility: hidden
+  }
+  30% {
+    left: 100%
+    visibility: hidden
+  }
+  35% {
+    left: 50%
+  }
+}@keyframes previous-realisation {
+   0%{
+     left: 50%
+   }
+   25% {
+    left: 150%
+    visibility: hidden
+  }
+  30% {
+    left: -150%
+    visibility: hidden
+  }
+  35% {
+    left: 50%
+  }
+}
+@keyframes realisation-show--next-enter {
+
+  100% {
+    left: 50%
+  }
+}
+@keyframes realisation-show--next-leave {
+
+  100% {
+    left: -100%
+  }
+}@keyframes realisation-show--previous-enter {
+
+  100% {
+    left: 50%
+  }
+}
+@keyframes realisation-show--previous-leave {
+
+  100% {
+    left: 150%
+  }
+}
+.realisation-show--next-enter
+  left: 150%
+  animation: realisation-show--next-enter .8s forwards;
+  animation-delay: 500ms
+
+.realisation-show--next-leave
+  animation: realisation-show--next-leave .8s forwards;
+
+.realisation-show--previous-enter
+  left: -150%
+  animation: realisation-show--previous-enter .8s forwards;
+  animation-delay: 500ms
+
+.realisation-show--previous-leave
+  animation: realisation-show--previous-leave .8s forwards;
+

@@ -1,0 +1,32 @@
+@import 'app/styles/charte'
+
+.wordpress-content
+  padding: 1rem
+  font-family: 'Roboto Slab', serif;
+  font-size: .8rem
+  line-height: 1.4
+  & p:nth-child(n+2)
+    margin-top: 1rem
+
+    color: $second-color
+  & li
+    margin-top: .3rem
+  & li::before
+    display: inline-block
+    margin-right: .2rem
+    content: ''
+    width: 5px
+    height: 5px
+    background-color: main-color
+    border-radius: 50%
+
+  & h3
+    color: main-color
+    font-weight: bold
+    font-size: 1.3rem
+  & a
+    text-decoration: underline
+    color: blue
+  & em
+    color: main-color
+    font-weight: bold

@@ -1,0 +1,44 @@
+@import 'app/styles/charte'
+
+.skill
+  color: $second-color
+  margin-top: 2rem
+  font-family: 'Roboto Slab', serif
+  width: 100%
+  @media screen and (min-width: $medium)
+    width: 33%
+
+
+  &-picture
+    background-color: $second-color;
+    border-radius: 50%;
+    padding: 2em;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    & img
+      display: block;
+      margin: auto;
+      width: 80px;
+      height: 80px;
+  &-title
+    text-align:center
+    padding: .6rem
+  & .wordpress-content
+    padding: 0
+    & li
+      text-align: center
+
+  & ul li::before
+      display: none
+      text-align center
+  &-title
+    font-weight: bold
+    font-size: 1.2rem
+    text-transform: uppercase
+
