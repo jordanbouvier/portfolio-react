@@ -1,6 +1,6 @@
 {
   "name": "Portfolio",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "",
   "author": "Jordan Bouvier <jordanbouvierpro@gmail.com>",
@@ -26,6 +26,7 @@
     "eslint-plugin-import": "*",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
+    "flow-bin": "^0.75.0",
     "jsdom": "*",
     "mocha": "*",
     "postcss-brunch": "0.5.0",
@@ -53,6 +54,7 @@
     "lint": "eslint --fix .",
     "test": "mocha tests/.setup.js tests/**/*.test.js",
     "test:watch": "mocha --watch tests/.setup.js tests/**/*.test.js",
-    "test:one": "mocha --watch tests/.setup.js $1"
+    "test:one": "mocha --watch tests/.setup.js $1",
+    "flow:init": "flow --init"
   }
 }
